@@ -1,0 +1,13 @@
+﻿@{
+    var bookId = ViewBag.BookId;
+}
+
+<form method="post" action="/Home/EditBook">
+    <h1>Вы редактируете описание книги с id = @bookId</h1>
+    <input type="hidden" name="bookId" value="@bookId" />
+    <div class="form-group">
+        <label for="newDescription">Новое описание</label>
+        <textarea class="form-control" id="newDescription" name="newDescription" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить описание</button>
+</form>
